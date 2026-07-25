@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+KEREGAYA - Reality Check Sebelum Checkout
 
-## Getting Started
+Jujur aja — pernah checkout sesuatu terus 5 menit kemudian nyesel? Iya, Keregaya buat kaum yang sering kena situasi kayak gitu. Ini bukan aplikasi budgeting yang boring, tapi lebih ke temen yang berani bilang "eh yakin?" pas kamu mau checkout barang yang sebenernya cuma FOMO doang.
 
-First, run the development server:
+Masukin income, pengeluaran wajib, sama target nabung. Terus tiap kali mau beli sesuatu, tanya Keregaya dulu. Dia bakal hitung angkanya, terus kasih tau — kadang halus, kadang nggak — apakah ini keputusan yang masuk akal, atau cuma nafsu sesaat yang bakal disesali pas tanggal tua.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Kenapa ini dibuat
+Karena banyak dari kita (termasuk yang bikin app ini) beli barang bukan karena butuh, tapi karena pengen. Ditambah paylater yang bikin belanja kerasa gratis padahal enggak — itu tagihan cuma ditunda, bukan dihapus. Keregaya nggak nge-judge gaya hidup siapa pun, tapi dia jujur soal apa yang bakal kejadian ke dompet kalau lanjut checkout.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Yang bisa dilakuin
+- **Input profil keuangan** — income, pengeluaran wajib, target nabung, sekali doang, nggak ribet
+- **Scoring engine** — ngitung berapa persen harga barang itu dari budget bebas bulan ini, plus penalti tambahan kalau:
+  - Bayar pake paylater/kredit
+  - Udah beli kategori yang sama berkali-kali bulan ini
+  - Ini "pengen" doang, bukan "butuh"
+- **Hasil traffic light** — 🟢 aman / 🟡 mikir dulu / 🔴 jangan — plus kalimat yang kadang jleb, kadang santuy, tapi selalu jujur
+- **History log** — biar keliatan sendiri pola belanjanya, siapa tau kaget
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dibangun pake apa
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Frontend**: Next.js + Tailwind CSS
+- **Backend**: Next.js API routes (serverless, nggak pake server terpisah)
+- **Database**: Supabase (PostgreSQL) + Row Level Security biar data user aman
+- **Hosting**: Vercel
