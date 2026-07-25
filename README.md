@@ -1,24 +1,33 @@
-KEREGAYA - Reality Check Sebelum Checkout
+**KEREGAYA**
+**_Reality check before you checkout._**
 
-Jujur aja — pernah checkout sesuatu terus 5 menit kemudian nyesel? Iya, Keregaya buat kaum yang sering kena situasi kayak gitu. Ini bukan aplikasi budgeting yang boring, tapi lebih ke temen yang berani bilang "eh yakin?" pas kamu mau checkout barang yang sebenernya cuma FOMO doang.
+So here's the thing.
+I noticed a lot of people (myself included) checkout something, then 5 minutes later immediately regret it.
 
-Masukin income, pengeluaran wajib, sama target nabung. Terus tiap kali mau beli sesuatu, tanya Keregaya dulu. Dia bakal hitung angkanya, terus kasih tau — kadang halus, kadang nggak — apakah ini keputusan yang masuk akal, atau cuma nafsu sesaat yang bakal disesali pas tanggal tua.
+Not because the item sucks. but because we didn't actually need it. we just wanted it, in that moment. and it keeps happening. this week it's fashion, next week it's gadgets, week after that who knows.
 
-## Kenapa ini dibuat
-Karena banyak dari kita (termasuk yang bikin app ini) beli barang bukan karena butuh, tapi karena pengen. Ditambah paylater yang bikin belanja kerasa gratis padahal enggak — itu tagihan cuma ditunda, bukan dihapus. Keregaya nggak nge-judge gaya hidup siapa pun, tapi dia jujur soal apa yang bakal kejadian ke dompet kalau lanjut checkout.
+So i built **KEREGAYA**.
 
-## Yang bisa dilakuin
-- **Input profil keuangan** — income, pengeluaran wajib, target nabung, sekali doang, nggak ribet
-- **Scoring engine** — ngitung berapa persen harga barang itu dari budget bebas bulan ini, plus penalti tambahan kalau:
-  - Bayar pake paylater/kredit
-  - Udah beli kategori yang sama berkali-kali bulan ini
-  - Ini "pengen" doang, bukan "butuh"
-- **Hasil traffic light** — 🟢 aman / 🟡 mikir dulu / 🔴 jangan — plus kalimat yang kadang jleb, kadang santuy, tapi selalu jujur
-- **History log** — biar keliatan sendiri pola belanjanya, siapa tau kaget
+The name's from "_kere tapi gaya_" (broke but stylish). 
 
-## Dibangun pake apa
+How it works is simple. input your income, fixed expenses, saving goal — once, done. then every time you're about to buy something, ask **KEREGAYA** first.
 
-- **Frontend**: Next.js + Tailwind CSS
-- **Backend**: Next.js API routes (serverless, nggak pake server terpisah)
-- **Database**: Supabase (PostgreSQL) + Row Level Security biar data user aman
-- **Hosting**: Vercel
+It runs the numbers behind the scenes, then tells you straight up. sometimes gentle, sometimes not. but always honest about what's actually gonna happen to your wallet if you go through with it.
+
+This isn't about judging anyone's lifestyle. it's just showing you, with actual numbers, that what feels "reasonable" sometimes really isn't.
+
+## FEATURES
+- **financial profile setup** — income, fixed expenses, saving goal. set it once, you're good
+- **scoring engine** — calculates what % of your disposable income that item actually costs, plus extra penalties if:
+  - you're paying with paylater/credit
+  - you've bought the same category multiple times this month (yeah, it keeps track)
+  - it's a "want," not a "need"
+- **traffic light results** — 🟢 safe / 🟡 think twice / 🔴 don't, with advice that's sometimes brutal, sometimes chill, always real
+- **history log** — a receipt of your spending patterns. brace yourself
+
+## built with
+
+- **frontend**: Next.js + Tailwind CSS
+- **backend**: Next.js API routes
+- **database**: Supabase (PostgreSQL) + Row Level Security
+- **hosting**: Vercel
